@@ -26,12 +26,24 @@ npx playwright install
 npm test
 ```
 
+Run specific test
+```
+npx playwright test tests/functional/calculator.spec.ts 
+```
+
+Run against specific browser in headless (available project if download are: chrome, firefox, edge, safarri)
+```
+npm run test --project=chromium
+```
+
 Run tests for a specific build (example: build 3):
 
 ```bash
 node ./scripts/run-tests.js -build 3
 # or via npm script
 npm run test:build -- -build 3
+# or via with browser
+npm run test:build -- -build 3 --project=chromium
 ```
 
 Valid build values
