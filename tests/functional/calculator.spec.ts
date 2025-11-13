@@ -9,7 +9,6 @@ test.beforeEach(async ({ page }) => {
 test.describe('Calculator page object tests', () => {
   test('adds two numbers', async ({ page }) => {
     const calc = new CalculatorPage(page);
-    await calc.goto();
     await calc.setFirst('2');
     await calc.setSecond('3');
     await calc.setOperation(Operations.Add);
@@ -19,7 +18,6 @@ test.describe('Calculator page object tests', () => {
 
     test('adds negative and positive numbers together', async ({ page }) => {
       const calc = new CalculatorPage(page);
-      await calc.goto();
       await calc.setFirst('-2');
       await calc.setSecond('3');
       await calc.setOperation(Operations.Add);
@@ -29,7 +27,6 @@ test.describe('Calculator page object tests', () => {
 
   test('concatenates values', async ({ page }) => {
     const calc = new CalculatorPage(page);
-    await calc.goto();
     await calc.setFirst('12');
     await calc.setSecond('34');
     await calc.setOperation(Operations.Concatenate);
@@ -59,7 +56,6 @@ test.describe('Calculator page object tests', () => {
 
   test('divides two numbers', async ({ page }) => {
     const calc = new CalculatorPage(page);
-    await calc.goto();
     await calc.setFirst('20');
     await calc.setSecond('4');
     await calc.setOperation(Operations.Divide);
@@ -70,7 +66,6 @@ test.describe('Calculator page object tests', () => {
   
   test('division by zero handled', async ({ page }) => {
     const calc = new CalculatorPage(page);
-    await calc.goto();
     await calc.setFirst('5');
     await calc.setSecond('0');
     await calc.setOperation(Operations.Divide);
@@ -80,7 +75,6 @@ test.describe('Calculator page object tests', () => {
 
   test('large numbers multiply', async ({ page }) => {
     const calc = new CalculatorPage(page);
-    await calc.goto();
     await calc.setFirst('1000000000');
     await calc.setSecond('1000000');
     await calc.setOperation(Operations.Multiply);;
@@ -90,7 +84,6 @@ test.describe('Calculator page object tests', () => {
 
   test('non-numeric input produces empty or error', async ({ page }) => {
     const calc = new CalculatorPage(page);
-    await calc.goto();
     await calc.setFirst('abc');
     await calc.setSecond('abc');
     await calc.setOperation(Operations.Add); 
@@ -100,7 +93,6 @@ test.describe('Calculator page object tests', () => {
 
   test('integer only truncates decimals', async ({ page }) => {
     const calc = new CalculatorPage(page);
-    await calc.goto();
     await calc.setFirst('2.9');
     await calc.setSecond('1.6');
     await calc.setOperation(Operations.Add)

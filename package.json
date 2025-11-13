@@ -6,6 +6,7 @@
     "test": "npx playwright test",
     "test:ui": "npx playwright test --ui",
     "test:headed": "npx playwright test --headed",
+    "test:buildenv": "node ./scripts/run-tests.js",
     "test:build": "node ./scripts/run-tests.js"
   },
   "devDependencies": {
