@@ -8,19 +8,19 @@ Hightlights
     - Differernt build variants run on the CI to verift across build versions. 
 - Agent used to build blueprint pom to speed up creation
 
-1. Install dependencies:
+### 1. Install dependencies:
 
 ```bash
 npm install
 ```
 
-2. Install Playwright browsers (required once):
+### 2. Install Playwright browsers (required once):
 
 ```bash
 npx playwright install
 ```
 
-3. Run tests:
+### 3. Run tests:
 
 ```bash
 npm test
