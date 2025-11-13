@@ -2,12 +2,21 @@
 
 This repository contains a minimal Playwright test setup end-to-end tests against the provided simple calculator.
 
-Hightlights
-- Page object model 
+#### Hightlights
+- Page object model
+- Verifies business logic
 - CI integration 
     - Differernt build variants run on the CI to verift across build versions. 
 - Agent used to build blueprint pom to speed up creation
 
+#### Next steps
+- Add visual tests for components
+- Add Api test to verify status of website and that responds in a timely manner (i.e 500ms)
+
+#### Known issue on prototype
+While developing this automation framework I found a defect that should be resolved, with has been details in the github issues, issue <https://github.com/ghowardqa/numan-simple-caculator-at/issues/1>. 
+
+## Setup 
 ### 1. Install dependencies:
 
 ```bash
